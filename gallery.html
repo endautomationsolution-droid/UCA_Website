@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery | Ultimate Cricket Academy</title>
+<meta name="description" content="Ultimate Cricket Academy is a premium cricket coaching academy offering structured programs for juniors, youth and adults, led by experienced coaches with world-class facilities.">
+
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+<noscript><style>.reveal{opacity:1 !important; transform:none !important;} #loader{display:none !important;}</style></noscript>
+</head>
+<body>
+  <div id="loader" aria-hidden="true">
+    <img src="assets/logo-transparent.png" alt="" width="200" height="94">
+    <div class="loader-bar"></div>
+  </div>
+
+  <div class="nav-scrim"></div>
+  <header class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="brand" aria-label="Ultimate Cricket Academy home">
+        <img src="assets/logo-transparent.png" alt="Ultimate Cricket Academy logo" width="220" height="103">
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="index.html" class="seam-link">Home</a></li>
+          <li><a href="about.html" class="seam-link">About</a></li>
+          <li><a href="programs.html" class="seam-link">Programs</a></li>
+          <li><a href="coaches.html" class="seam-link">Coaches</a></li>
+          <li><a href="facilities.html" class="seam-link">Facilities</a></li>
+          <li><a href="gallery.html" class="seam-link active">Gallery</a></li>
+          <li><a href="admissions.html" class="seam-link">Admissions</a></li>
+          <li><a href="contact.html" class="seam-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-cta">
+        <a href="https://wa.me/918087288072?text=Hi%2C%20I%27m%20interested%20in%20enrolling%20at%20Ultimate%20Cricket%20Academy" class="btn btn-gold" target="_blank" rel="noopener">Enroll Now</a>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <section class="page-header">
+    <img src="assets/icon-mark.png" alt="" class="page-header-swoosh" aria-hidden="true">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> / Gallery</div>
+      <span class="eyebrow">Gallery</span>
+      <h1>Moments From The Academy</h1>
+      <p>A look at training sessions, camps and matchdays. Replace these placeholders with your own academy photography.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="filter-tabs reveal">
+        <button class="active" data-filter="all">All</button>
+        <button data-filter="training">Training</button>
+        <button data-filter="matches">Matches</button>
+        <button data-filter="camps">Camps</button>
+        <button data-filter="facilities">Facilities</button>
+        <button data-filter="achievements">Achievements</button>
+      </div>
+
+      <!--
+        PHOTO TILES: this gallery now supports two tile types side by side.
+
+        VIDEO tile (existing style) — gradient background + play icon:
+          <div class="gallery-tile reveal" data-category="training" style="background:linear-gradient(160deg, var(--green), var(--green-dark));">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><circle cx="12" cy="12" r="8.5"/><path d="M8 16V8l7 4z" fill="#fff" stroke="none"/></svg>
+            <span>Caption Here</span>
+          </div>
+
+        PHOTO tile — once you have a real image, replace a ".photo-placeholder" tile below with this:
+          <div class="gallery-tile reveal" data-category="training">
+            <img src="assets/gallery/your-photo.jpg" alt="Description of the photo" loading="lazy">
+            <span>Caption Here</span>
+          </div>
+        Save your photo files into the assets/gallery/ folder first, then point the src at the filename.
+      -->
+      <div class="grid grid-3">
+        <div class="gallery-tile reveal" data-category="training" data-video="assets/videos/morning-nets-mihir.mp4" style="cursor:pointer;">
+          <img src="assets/gallery/morning-nets-thumb.jpg" alt="Batter practicing in the nets during morning session" loading="lazy">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><circle cx="12" cy="12" r="8.5"/><path d="M8 16V8l7 4z" fill="#fff" stroke="none"/></svg>
+          <span>Batting Session</span>
+        </div>
+        <div class="gallery-tile reveal reveal-delay-1" data-category="training">
+          <img src="assets/gallery/womens-team.jpg" alt="Women's team group photo on the field" loading="lazy" style="object-position:35% center;">
+          <span>Womens Team</span>
+        </div>
+        <div class="gallery-tile reveal reveal-delay-1" data-category="achievements">
+          <img src="assets/gallery/inter-academy-championship-2.jpg" alt="Academy team celebrating with the Inter-Academy Championship trophy" loading="lazy">
+          <span>Inter-Academy Championship</span>
+        </div>
+        <div class="gallery-tile reveal reveal-delay-2" data-category="achievements">
+          <img src="assets/gallery/team-trophy-win.jpg" alt="Team celebrating a tournament win with the trophy" loading="lazy">
+          <span>Team Champions</span>
+        </div>
+        <div class="gallery-tile reveal" data-category="camps">
+          <img src="assets/gallery/camps.jpg" alt="Academy team with trophies after a camp tournament" loading="lazy">
+          <span>Annual Prize Ceremony</span>
+        </div>
+        <div class="gallery-tile reveal" data-category="facilities" data-video="assets/videos/power-hitting-drills.mp4" style="cursor:pointer;">
+          <img src="assets/gallery/power-hitting-drills-cover.jpg" alt="Player practicing power hitting drills" loading="lazy">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><circle cx="12" cy="12" r="8.5"/><path d="M8 16V8l7 4z" fill="#fff" stroke="none"/></svg>
+          <span>Power Hitting Drills</span>
+        </div>
+        <div class="gallery-tile reveal reveal-delay-1" data-category="facilities">
+          <img src="assets/gallery/ground-facilities.jpg" alt="Cricket academy ground" loading="lazy">
+          <span>Practice Ground</span>
+        </div>
+        <div class="gallery-tile reveal reveal-delay-1" data-category="training" data-video="assets/videos/batting-drills.mp4" style="cursor:pointer;">
+          <img src="assets/gallery/batting-drills-thumb.jpg" alt="Batting drills practice session" loading="lazy">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><circle cx="12" cy="12" r="8.5"/><path d="M8 16V8l7 4z" fill="#fff" stroke="none"/></svg>
+          <span>Batting Drills</span>
+        </div>
+        <div class="gallery-tile reveal reveal-delay-2" data-category="matches">
+          <img src="assets/gallery/inter-academy-championship.jpg" alt="Players forming a guard of honour at an inter academy championship match" loading="lazy">
+          <span>Inter Academy Championship</span>
+        </div>
+        <div class="gallery-tile reveal reveal-delay-2" data-category="matches">
+          <img src="assets/gallery/inter-academy-match.jpg" alt="Inter academy match" loading="lazy">
+          <span>Inter Academy Match</span>
+        </div>
+        <div class="gallery-tile reveal reveal-delay-2" data-category="matches">
+          <img src="assets/gallery/matchday.jpg" alt="Match in progress on the academy ground" loading="lazy">
+          <span>Matchday</span>
+        </div>
+        <div class="gallery-tile reveal" data-category="camps" data-video="assets/videos/bowling-maddy.mp4" style="cursor:pointer;">
+          <img src="assets/gallery/bowling-thumb.jpg" alt="Bowler delivering the ball during a match" loading="lazy">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><circle cx="12" cy="12" r="8.5"/><path d="M8 16V8l7 4z" fill="#fff" stroke="none"/></svg>
+          <span>Spin bowling</span>
+        </div>
+        <div class="gallery-tile reveal reveal-delay-1" data-category="facilities" data-video="assets/videos/fast-bowling.mp4" style="cursor:pointer;">
+          <img src="assets/gallery/fast-bowling-thumb.jpg" alt="Bowler delivering the ball in the nets" loading="lazy">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><circle cx="12" cy="12" r="8.5"/><path d="M8 16V8l7 4z" fill="#fff" stroke="none"/></svg>
+          <span>Fast Bowling</span>
+        </div>
+        <div class="gallery-tile reveal reveal-delay-1" data-category="achievements">
+          <img src="assets/gallery/dm-memorial-trophy.jpg" alt="Team with DM Memorial Trophy" loading="lazy">
+          <span>DM Memorial Trophy</span>
+        </div>
+        <div class="gallery-tile reveal reveal-delay-2" data-category="training" data-video="assets/videos/fielding-drills.mp4" style="cursor:pointer;">
+          <img src="assets/gallery/fielding-thumb.jpg" alt="Player diving to field the ball during a drill" loading="lazy">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><circle cx="12" cy="12" r="8.5"/><path d="M8 16V8l7 4z" fill="#fff" stroke="none"/></svg>
+          <span>Fielding &amp; Fitness Drills</span>
+        </div>
+        <div class="gallery-tile reveal" data-category="achievements">
+          <img src="assets/gallery/achievement-shalmali-khushi-ishita-u19.jpg" alt="Newspaper clipping: Shalmali, Khushi and Ishita star in Maharashtra U-19 women's win" loading="lazy">
+          <span>Shalmali, Khushi &amp; Ishita Star in U-19 Win</span>
+        </div>
+        <div class="gallery-tile reveal reveal-delay-1" data-category="achievements">
+          <img src="assets/gallery/achievement-shalmali-marathi-clipping-1.jpg" alt="Marathi newspaper clipping on Shalmali Kshatriya's all-round performance" loading="lazy">
+          <span>Shalmali's All-Round Show Sinks Delhi</span>
+        </div>
+        <div class="gallery-tile reveal reveal-delay-2" data-category="achievements">
+          <img src="assets/gallery/achievement-shalmali-marathi-clipping-2.jpg" alt="Marathi newspaper clipping praising Shalmali Kshatriya's all-round performance" loading="lazy">
+          <span>Shalmali's Performance Wins Praise</span>
+        </div>
+        <div class="gallery-tile reveal" data-category="achievements">
+          <img src="assets/gallery/achievement-kensington-league-award-1.jpg" alt="Player receiving Under 12 Kensington Cricket League award" loading="lazy">
+          <span>Under-12 Kensington League Award</span>
+        </div>
+        <div class="gallery-tile reveal reveal-delay-1" data-category="achievements">
+          <img src="assets/gallery/achievement-kensington-league-award-2.jpg" alt="Player receiving Under 12 Kensington Cricket League award" loading="lazy">
+          <span>Under-12 Kensington League Award</span>
+        </div>
+        <div class="gallery-tile reveal reveal-delay-2" data-category="achievements">
+          <img src="assets/gallery/achievement-ndca-team-medals.jpg" alt="Academy players with medals at Nashik District Cricket Association event" loading="lazy">
+          <span>NDCA Team Medal Winners</span>
+        </div>
+        <div class="gallery-tile reveal" data-category="achievements">
+          <img src="assets/gallery/achievement-ishwari-maharashtra-captain.jpg" alt="Newspaper clipping on Ishwari Sawakare leading Maharashtra U-19 women's team" loading="lazy">
+          <span>Ishwari Leads Maharashtra's U-19 Squad</span>
+        </div>
+        <div class="gallery-tile reveal reveal-delay-1" data-category="achievements">
+          <img src="assets/gallery/achievement-lokmat-nashik-pune.jpg" alt="Lokmat newspaper clipping on Nashik's win over Pune" loading="lazy">
+          <span>Nashik's Win Over Pune &mdash; Lokmat</span>
+        </div>
+        <div class="gallery-tile reveal reveal-delay-2" data-category="achievements">
+          <img src="assets/gallery/achievement-dnyaneshwari-shalmali-ved.jpg" alt="Newspaper clipping on Dnyaneshwari's century, Shalmali's half-century and Ved Dapurkar's eight wickets" loading="lazy">
+          <span>Century, Half-Century &amp; 8-Wicket Haul</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="videoLightbox" class="video-lightbox" aria-hidden="true">
+    <div class="video-lightbox-backdrop" data-close-lightbox></div>
+    <div class="video-lightbox-inner">
+      <button class="video-lightbox-close" aria-label="Close video" data-close-lightbox>&times;</button>
+      <video id="videoLightboxPlayer" controls playsinline></video>
+      <iframe id="videoLightboxFrame" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen style="display:none;width:100%;aspect-ratio:9/16;max-height:80vh;border:0;"></iframe>
+    </div>
+  </div>
+
+  <section class="section section-soft">
+    <div class="container">
+      <div class="cta-banner reveal">
+        <h2>Want To See A Session Live?</h2>
+        <p>Come watch a batch in action before booking your own trial session.</p>
+        <div class="cta-actions">
+          <a href="contact.html" class="btn btn-gold">Schedule A Visit</a>
+          <a href="admissions.html" class="btn btn-outline">Book A Free Trial</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-stitch" aria-hidden="true"></div>
+    <div class="container footer-top">
+      <div class="footer-social" aria-label="Social media links" style="margin:0 0 32px;">
+        <a href="https://www.facebook.com/bhavik.mankodi" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7.5H16l.4-3H13.5V8.4c0-.87.24-1.46 1.5-1.46H16.5V4.34C16.24 4.3 15.35 4.23 14.32 4.23c-2.15 0-3.62 1.31-3.62 3.72V10.5H8.25v3H10.7V21h2.8z"/></svg></a>
+        <a href="https://www.instagram.com/ultimate_cricket_academy?igsi=dTNucmFyZTFrN2hw" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="3.6"/><circle cx="17.2" cy="6.8" r="1"/></svg></a>
+        <a href="https://www.youtube.com/@mankodibhavik9" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="5.5" width="19" height="13" rx="3.5"/><path d="M10.5 9.3l5 2.7-5 2.7z" fill="currentColor" stroke="none"/></svg></a>
+        <a href="https://wa.me/918087288072" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.65-1.17A9 9 0 1 0 12 3zm0 1.7a7.3 7.3 0 0 1 6.13 11.27l-.2.31.9 3.3-3.38-.86-.3.18A7.3 7.3 0 1 1 12 4.7zm-3.1 3.68c-.16 0-.42.06-.64.31-.22.25-.85.83-.85 2.02s.87 2.35.99 2.51c.12.16 1.7 2.6 4.13 3.64 2.04.87 2.46.7 2.9.65.44-.04 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.44-1.34-1.68-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.32-.75-1.8-.2-.47-.4-.4-.55-.41z"/></svg></a>
+      </div>
+      <div class="footer-addresses">
+        <div>
+          <div class="footer-address-badge"><img src="assets/logo-transparent.png" alt="Ultimate Cricket Academy logo" class="footer-address-logo"></div>
+          <h4>Ultimate Cricket Academy</h4>
+          <div class="contact-line">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-6.3 7-11.5A7 7 0 0 0 5 9.5C5 14.7 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.3"/></svg>
+            <span>Late. Dattaji Mogre Krida Sankul, Near Gems Schools, Opp. Samrat Gokuldham Building, Kamal Nagar Stand, Hirawadi, Panchavati, Nashik</span>
+          </div>
+        </div>
+        <div>
+          <div class="footer-address-badge"><img src="assets/pingle-logo-transparent.png" alt="Pingle Cricket Academy logo" class="footer-address-logo"></div>
+          <h4>Pingle Cricket Academy</h4>
+          <div class="contact-line">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-6.3 7-11.5A7 7 0 0 0 5 9.5C5 14.7 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.3"/></svg>
+            <span>Pingale Farm, Saptarang Society, Opposite to Pawar Lawns, RTO Office, Peth Road, Panchavati, Nashik</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="footer-bottom">
+        <span>&copy; <span data-year>2026</span> Ultimate Cricket Academy. All rights reserved.</span>
+        <span><a href="#">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="#">Terms of Use</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <button id="toTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 15l6-6 6 6"/></svg>
+  </button>
+
+  <script src="js/main.js"></script>
+  <script>
+    (function(){
+      var lightbox = document.getElementById('videoLightbox');
+      var player = document.getElementById('videoLightboxPlayer');
+      var frame = document.getElementById('videoLightboxFrame');
+      if(!lightbox || !player) return;
+
+      function openLightbox(src){
+        frame.style.display = 'none';
+        frame.removeAttribute('src');
+        player.style.display = '';
+        player.setAttribute('src', src);
+        lightbox.classList.add('open');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        player.play().catch(function(){});
+      }
+      function openYoutubeLightbox(id){
+        player.pause();
+        player.style.display = 'none';
+        player.removeAttribute('src');
+        frame.style.display = '';
+        frame.setAttribute('src', 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0');
+        lightbox.classList.add('open');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+      function closeLightbox(){
+        lightbox.classList.remove('open');
+        lightbox.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        player.pause();
+        player.removeAttribute('src');
+        player.load();
+        frame.removeAttribute('src');
+        frame.style.display = 'none';
+      }
+
+      document.querySelectorAll('.gallery-tile[data-video]').forEach(function(tile){
+        tile.addEventListener('click', function(){
+          openLightbox(tile.getAttribute('data-video'));
+        });
+      });
+      document.querySelectorAll('.gallery-tile[data-youtube]').forEach(function(tile){
+        tile.addEventListener('click', function(){
+          openYoutubeLightbox(tile.getAttribute('data-youtube'));
+        });
+      });
+      lightbox.querySelectorAll('[data-close-lightbox]').forEach(function(el){
+        el.addEventListener('click', closeLightbox);
+      });
+      document.addEventListener('keydown', function(e){
+        if(e.key === 'Escape') closeLightbox();
+      });
+    })();
+  </script>
+</body>
+</html>
