@@ -105,26 +105,26 @@
         </div>
 
         <div class="reveal reveal-delay-1">
-          <form data-validate novalidate>
+          <form data-validate data-whatsapp="919021688072" novalidate>
             <div class="form-success" id="admissionSuccess">Thank you! Your enquiry has been received &mdash; our admissions team will call you within 24 hours to confirm your trial session.</div>
             <div class="form-grid">
               <div class="field">
                 <label for="studentName">Student Name</label>
-                <input type="text" id="studentName" name="studentName" required>
+                <input type="text" id="studentName" name="studentName" data-wa-label="Student Name" required>
                 <span class="error">Please enter the student's name.</span>
               </div>
               <div class="field">
                 <label for="parentName">Parent / Guardian Name</label>
-                <input type="text" id="parentName" name="parentName">
+                <input type="text" id="parentName" name="parentName" data-wa-label="Parent/Guardian Name">
               </div>
               <div class="field">
                 <label for="age">Student Age</label>
-                <input type="number" id="age" name="age" min="4" max="60" required>
+                <input type="number" id="age" name="age" data-wa-label="Student Age" min="4" max="60" required>
                 <span class="error">Please enter an age.</span>
               </div>
               <div class="field">
                 <label for="program">Program Interested In</label>
-                <select id="program" name="program" required>
+                <select id="program" name="program" data-wa-label="Program" required>
                   <option value="">Select a program</option>
                   <option>Mini Cricketers (5&ndash;8)</option>
                   <option>Junior Development (9&ndash;12)</option>
@@ -137,17 +137,17 @@
               </div>
               <div class="field">
                 <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone" required>
+                <input type="tel" id="phone" name="phone" data-wa-label="Phone Number" required>
                 <span class="error">Please enter a valid phone number.</span>
               </div>
               <div class="field">
                 <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" data-wa-label="Email" required>
                 <span class="error">Please enter a valid email address.</span>
               </div>
               <div class="field full">
                 <label for="message">Anything We Should Know?</label>
-                <textarea id="message" name="message" placeholder="Playing experience, preferred batch timing, etc."></textarea>
+                <textarea id="message" name="message" data-wa-label="Notes" placeholder="Playing experience, preferred batch timing, etc."></textarea>
               </div>
             </div>
             <button type="submit" class="btn btn-gold btn-block" style="margin-top:26px;">Submit Enquiry</button>

@@ -101,22 +101,22 @@
         <div class="reveal reveal-delay-1">
           <span class="eyebrow">Send A Message</span>
           <h2>Enquiry Form</h2>
-          <form data-validate novalidate style="margin-top:20px;">
+          <form data-validate data-whatsapp="919021688072" novalidate style="margin-top:20px;">
             <div class="form-success" id="contactSuccess">Thank you for reaching out! We've received your message and will respond within one business day.</div>
             <div class="form-grid">
               <div class="field">
                 <label for="cName">Name</label>
-                <input type="text" id="cName" name="cName" required>
+                <input type="text" id="cName" name="cName" data-wa-label="Name" required>
                 <span class="error">Please enter your name.</span>
               </div>
               <div class="field">
                 <label for="cAge">Age</label>
-                <input type="number" id="cAge" name="cAge" min="1" max="120" required>
+                <input type="number" id="cAge" name="cAge" data-wa-label="Age" min="1" max="120" required>
                 <span class="error">Please enter a valid age.</span>
               </div>
               <div class="field">
                 <label for="cGender">Gender</label>
-                <select id="cGender" name="cGender" required>
+                <select id="cGender" name="cGender" data-wa-label="Gender" required>
                   <option value="">Select</option>
                   <option>Male</option>
                   <option>Female</option>
@@ -126,12 +126,12 @@
               </div>
               <div class="field">
                 <label for="cPhone">Phone Number</label>
-                <input type="tel" id="cPhone" name="cPhone" required>
+                <input type="tel" id="cPhone" name="cPhone" data-wa-label="Phone Number" required>
                 <span class="error">Please enter a valid phone number.</span>
               </div>
               <div class="field full">
                 <label for="cMessage">Message</label>
-                <textarea id="cMessage" name="cMessage" required placeholder="Tell us a bit about what you're looking for..."></textarea>
+                <textarea id="cMessage" name="cMessage" data-wa-label="Message" required placeholder="Tell us a bit about what you're looking for..."></textarea>
                 <span class="error">Please enter a message.</span>
               </div>
             </div>

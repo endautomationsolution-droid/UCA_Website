@@ -168,6 +168,19 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!ok) valid = false;
       });
       if (valid) {
+        var waNumber = form.getAttribute('data-whatsapp');
+        if (waNumber) {
+          var lines = [];
+          form.querySelectorAll('[data-wa-label]').forEach(function (input) {
+            var val = input.value.trim();
+            if (val) lines.push(input.getAttribute('data-wa-label') + ': ' + val);
+          });
+          var pageSource = document.title.replace(/\s*\|.*$/, '');
+          var text = 'New enquiry from website (' + pageSource + ')%0A%0A' +
+            lines.map(function (l) { return encodeURIComponent(l); }).join('%0A');
+          var waUrl = 'https://wa.me/' + waNumber + '?text=' + text;
+          window.open(waUrl, '_blank');
+        }
         form.reset();
         if (success) {
           success.classList.add('show');
