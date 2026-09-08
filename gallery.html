@@ -95,9 +95,13 @@
           <img src="assets/gallery/team-trophy-win.jpg" alt="Achievements" loading="lazy">
           <span>Achievements</span>
         </button>
+        <button class="gallery-tile category-tile" data-category-target="nashik-wpl">
+          <img src="assets/gallery/nwpl-champions.jpg" alt="Nashik Women's Premier League" loading="lazy">
+          <span>Nashik Women&rsquo;s Premier League</span>
+        </button>
       </div>
 
-      <button id="galleryBack" class="btn btn-outline" style="display:none; margin-bottom:24px;">&larr; All Categories</button>
+      <button id="galleryBack" class="btn btn-outline-navy" style="display:none; margin-bottom:24px;">&larr; All Categories</button>
       <h2 id="galleryCategoryTitle" style="display:none; margin-bottom:20px;"></h2>
 
       <!--
@@ -219,6 +223,10 @@
           <img src="assets/gallery/achievement-dnyaneshwari-shalmali-ved.jpg" alt="Newspaper clipping on Dnyaneshwari's century, Shalmali's half-century and Ved Dapurkar's eight wickets" loading="lazy">
           <span>Century, Half-Century &amp; 8-Wicket Haul</span>
         </div>
+        <div class="gallery-tile reveal" data-category="nashik-wpl">
+          <img src="assets/gallery/nwpl-champions.jpg" alt="Team celebrating as champions of the Nashik Women's Premier League with NDCA officials" loading="lazy">
+          <span>NWPL Champions</span>
+        </div>
       </div>
     </div>
   </section>
@@ -339,6 +347,57 @@
       document.addEventListener('keydown', function(e){
         if(e.key === 'Escape') closeLightbox();
       });
+    })();
+  </script>
+  <script>
+    (function(){
+      var categoryGrid = document.getElementById('categoryGrid');
+      var galleryItems = document.getElementById('galleryItems');
+      var galleryBack = document.getElementById('galleryBack');
+      var galleryTitle = document.getElementById('galleryCategoryTitle');
+      if(!categoryGrid || !galleryItems || !galleryBack || !galleryTitle) return;
+
+      var titleMap = {
+        'bowling': 'Bowling',
+        'batting': 'Batting',
+        'fielding': 'Fielding & Fitness',
+        'dm-trophy': 'Late D.M. Memorial Trophy',
+        'matches': 'Matches',
+        'camps': 'Camps',
+        'facilities': 'Facilities',
+        'achievements': 'Achievements',
+        'nashik-wpl': 'Nashik Women\u2019s Premier League'
+      };
+
+      var items = galleryItems.querySelectorAll('[data-category]');
+
+      function showCategory(cat){
+        categoryGrid.style.display = 'none';
+        galleryBack.style.display = '';
+        galleryTitle.style.display = '';
+        galleryTitle.textContent = titleMap[cat] || cat;
+        galleryItems.style.display = '';
+        items.forEach(function(item){
+          item.style.display = (item.getAttribute('data-category') === cat) ? '' : 'none';
+        });
+        galleryBack.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      function showAllCategories(){
+        categoryGrid.style.display = '';
+        galleryBack.style.display = 'none';
+        galleryTitle.style.display = 'none';
+        galleryItems.style.display = 'none';
+        categoryGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      categoryGrid.querySelectorAll('.category-tile').forEach(function(tile){
+        tile.addEventListener('click', function(){
+          showCategory(tile.getAttribute('data-category-target'));
+        });
+      });
+
+      galleryBack.addEventListener('click', showAllCategories);
     })();
   </script>
 </body>
