@@ -56,20 +56,49 @@
       <div class="breadcrumb"><a href="index.html">Home</a> / Gallery</div>
       <span class="eyebrow">Gallery</span>
       <h1>Moments From The Academy</h1>
-      <p>A look at training sessions, camps and matchdays. Replace these placeholders with your own academy photography.</p>
+      <p>Browse by category to see training, matches, camps and achievements.</p>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
-      <div class="filter-tabs reveal">
-        <button class="active" data-filter="all">All</button>
-        <button data-filter="training">Training</button>
-        <button data-filter="matches">Matches</button>
-        <button data-filter="camps">Camps</button>
-        <button data-filter="facilities">Facilities</button>
-        <button data-filter="achievements">Achievements</button>
+      <div class="category-grid reveal" id="categoryGrid">
+        <button class="gallery-tile category-tile" data-category-target="bowling">
+          <img src="assets/gallery/bowling-thumb.jpg" alt="Bowling" loading="lazy">
+          <span>Bowling</span>
+        </button>
+        <button class="gallery-tile category-tile" data-category-target="batting">
+          <img src="assets/gallery/morning-nets-thumb.jpg" alt="Batting" loading="lazy">
+          <span>Batting</span>
+        </button>
+        <button class="gallery-tile category-tile" data-category-target="fielding">
+          <img src="assets/gallery/fielding-thumb.jpg" alt="Fielding & Fitness" loading="lazy">
+          <span>Fielding &amp; Fitness</span>
+        </button>
+        <button class="gallery-tile category-tile" data-category-target="dm-trophy">
+          <img src="assets/gallery/dm-memorial-trophy.jpg" alt="Late D.M. Memorial Trophy" loading="lazy">
+          <span>Late D.M. Memorial Trophy</span>
+        </button>
+        <button class="gallery-tile category-tile" data-category-target="matches">
+          <img src="assets/gallery/matchday.jpg" alt="Matches" loading="lazy">
+          <span>Matches</span>
+        </button>
+        <button class="gallery-tile category-tile" data-category-target="camps">
+          <img src="assets/gallery/camps.jpg" alt="Camps" loading="lazy">
+          <span>Camps</span>
+        </button>
+        <button class="gallery-tile category-tile" data-category-target="facilities">
+          <img src="assets/gallery/ground-facilities.jpg" alt="Facilities" loading="lazy">
+          <span>Facilities</span>
+        </button>
+        <button class="gallery-tile category-tile" data-category-target="achievements">
+          <img src="assets/gallery/team-trophy-win.jpg" alt="Achievements" loading="lazy">
+          <span>Achievements</span>
+        </button>
       </div>
+
+      <button id="galleryBack" class="btn btn-outline" style="display:none; margin-bottom:24px;">&larr; All Categories</button>
+      <h2 id="galleryCategoryTitle" style="display:none; margin-bottom:20px;"></h2>
 
       <!--
         PHOTO TILES: this gallery now supports two tile types side by side.
@@ -87,13 +116,13 @@
           </div>
         Save your photo files into the assets/gallery/ folder first, then point the src at the filename.
       -->
-      <div class="grid grid-3">
-        <div class="gallery-tile reveal" data-category="training" data-video="assets/videos/morning-nets-mihir.mp4" style="cursor:pointer;">
+      <div class="grid grid-3" id="galleryItems" style="display:none;">
+        <div class="gallery-tile reveal" data-category="batting" data-video="assets/videos/morning-nets-mihir.mp4" style="cursor:pointer;">
           <img src="assets/gallery/morning-nets-thumb.jpg" alt="Batter practicing in the nets during morning session" loading="lazy">
           <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><circle cx="12" cy="12" r="8.5"/><path d="M8 16V8l7 4z" fill="#fff" stroke="none"/></svg>
           <span>Batting Session</span>
         </div>
-        <div class="gallery-tile reveal reveal-delay-1" data-category="training">
+        <div class="gallery-tile reveal reveal-delay-1" data-category="matches">
           <img src="assets/gallery/womens-team.jpg" alt="Women's team group photo on the field" loading="lazy" style="object-position:35% center;">
           <span>Womens Team</span>
         </div>
@@ -109,7 +138,7 @@
           <img src="assets/gallery/camps.jpg" alt="Academy team with trophies after a camp tournament" loading="lazy">
           <span>Annual Prize Ceremony</span>
         </div>
-        <div class="gallery-tile reveal" data-category="facilities" data-video="assets/videos/power-hitting-drills.mp4" style="cursor:pointer;">
+        <div class="gallery-tile reveal" data-category="batting" data-video="assets/videos/power-hitting-drills.mp4" style="cursor:pointer;">
           <img src="assets/gallery/power-hitting-drills-cover.jpg" alt="Player practicing power hitting drills" loading="lazy">
           <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><circle cx="12" cy="12" r="8.5"/><path d="M8 16V8l7 4z" fill="#fff" stroke="none"/></svg>
           <span>Power Hitting Drills</span>
@@ -118,7 +147,7 @@
           <img src="assets/gallery/ground-facilities.jpg" alt="Cricket academy ground" loading="lazy">
           <span>Practice Ground</span>
         </div>
-        <div class="gallery-tile reveal reveal-delay-1" data-category="training" data-video="assets/videos/batting-drills.mp4" style="cursor:pointer;">
+        <div class="gallery-tile reveal reveal-delay-1" data-category="batting" data-video="assets/videos/batting-drills.mp4" style="cursor:pointer;">
           <img src="assets/gallery/batting-drills-thumb.jpg" alt="Batting drills practice session" loading="lazy">
           <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><circle cx="12" cy="12" r="8.5"/><path d="M8 16V8l7 4z" fill="#fff" stroke="none"/></svg>
           <span>Batting Drills</span>
@@ -135,21 +164,21 @@
           <img src="assets/gallery/matchday.jpg" alt="Match in progress on the academy ground" loading="lazy">
           <span>Matchday</span>
         </div>
-        <div class="gallery-tile reveal" data-category="camps" data-video="assets/videos/bowling-maddy.mp4" style="cursor:pointer;">
+        <div class="gallery-tile reveal" data-category="bowling" data-video="assets/videos/bowling-maddy.mp4" style="cursor:pointer;">
           <img src="assets/gallery/bowling-thumb.jpg" alt="Bowler delivering the ball during a match" loading="lazy">
           <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><circle cx="12" cy="12" r="8.5"/><path d="M8 16V8l7 4z" fill="#fff" stroke="none"/></svg>
           <span>Spin bowling</span>
         </div>
-        <div class="gallery-tile reveal reveal-delay-1" data-category="facilities" data-video="assets/videos/fast-bowling.mp4" style="cursor:pointer;">
+        <div class="gallery-tile reveal reveal-delay-1" data-category="bowling" data-video="assets/videos/fast-bowling.mp4" style="cursor:pointer;">
           <img src="assets/gallery/fast-bowling-thumb.jpg" alt="Bowler delivering the ball in the nets" loading="lazy">
           <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><circle cx="12" cy="12" r="8.5"/><path d="M8 16V8l7 4z" fill="#fff" stroke="none"/></svg>
           <span>Fast Bowling</span>
         </div>
-        <div class="gallery-tile reveal reveal-delay-1" data-category="achievements">
+        <div class="gallery-tile reveal reveal-delay-1" data-category="dm-trophy">
           <img src="assets/gallery/dm-memorial-trophy.jpg" alt="Team with DM Memorial Trophy" loading="lazy">
           <span>DM Memorial Trophy</span>
         </div>
-        <div class="gallery-tile reveal reveal-delay-2" data-category="training" data-video="assets/videos/fielding-drills.mp4" style="cursor:pointer;">
+        <div class="gallery-tile reveal reveal-delay-2" data-category="fielding" data-video="assets/videos/fielding-drills.mp4" style="cursor:pointer;">
           <img src="assets/gallery/fielding-thumb.jpg" alt="Player diving to field the ball during a drill" loading="lazy">
           <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><circle cx="12" cy="12" r="8.5"/><path d="M8 16V8l7 4z" fill="#fff" stroke="none"/></svg>
           <span>Fielding &amp; Fitness Drills</span>
